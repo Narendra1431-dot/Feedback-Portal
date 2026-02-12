@@ -40,7 +40,7 @@ A comprehensive grievance and feedback management system for educational institu
 ## How to Use
 
 1. Clone or download the repository
-2. Open `feekback.html` in a modern web browser
+2. Open `feedback.html` in a modern web browser
 3. Switch between Student and Admin views using the header buttons
 4. As a student: Submit grievances and track progress
 5. As an admin: Manage grievances, apply filters, and export data
