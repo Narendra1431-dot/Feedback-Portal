@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+  <title>Senior Enterprise · Grievance & Feedback Portal</title>
+  <!-- Fonts, Icons, and Chart.js for analytics -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="portal" id="portal-root"></div>
+  <div class="toast-container" id="toastContainer"></div>
+  <!-- MODAL: single modal for comments (dynamic) -->
+  <div class="modal" id="commentModal">
+    <div class="modal-content">
+      <h3 style="display:flex; align-items:center; gap:12px; margin-bottom:20px;"><i class="fas fa-comments"></i> Grievance discussion</h3>
+      <div id="commentThread" class="comment-thread"></div>
+      <div style="display:flex; gap:12px; margin-top:12px;">
+        <input type="text" id="commentInput" placeholder="Add a comment..." style="flex:1; padding:14px; border-radius:30px; border:1.5px solid #d2e2ea;">
+        <button id="submitCommentBtn" class="btn-primary" style="width:auto; padding:12px 24px;">Post</button>
+      </div>
+      <button id="closeModalBtn" style="margin-top:24px; background:transparent; border:none; color:#4a7285;">✕ close</button>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
