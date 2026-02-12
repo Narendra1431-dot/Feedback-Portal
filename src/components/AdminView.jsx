@@ -11,6 +11,7 @@ const AdminView = () => {
     dateFrom: '',
     dateTo: ''
   });
+  const [searchInput, setSearchInput] = useState('');
   const [sort, setSort] = useState({ by: 'id', dir: 'asc' });
   const [page, setPage] = useState(1);
   const pageSize = 5;
@@ -139,7 +140,8 @@ const AdminView = () => {
         <div className="filter-bar">
           <div className="filter-group">
             <i className="fas fa-search"></i>
-            <input type="text" name="search" placeholder="Search" value={filters.search} onChange={handleFilterChange} />
+            <input type="text" placeholder="Search" value={searchInput} onChange={(e) => setSearchInput(e.target.value)} />
+            <button className="btn-secondary" onClick={() => { setFilters(prev => ({ ...prev, search: searchInput })); setPage(1); }}>Bilatu</button>
           </div>
           <div className="filter-group">
             <i className="fas fa-tag"></i>

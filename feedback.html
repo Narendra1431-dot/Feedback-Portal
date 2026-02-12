@@ -729,7 +729,7 @@
               <button id="exportCsvBtn" class="export-btn"><i class="fas fa-download"></i> Export CSV</button>
             </div>
             <div class="filter-bar">
-              <div class="filter-group"><i class="fas fa-search"></i><input type="text" id="filterSearch" placeholder="Search" value="${this.adminFilters.search}"></div>
+              <div class="filter-group"><i class="fas fa-search"></i><input type="text" id="filterSearch" placeholder="Search" value="${this.adminFilters.search}"><button id="searchBtn" class="btn-secondary">Bilatu</button></div>
               <div class="filter-group"><i class="fas fa-tag"></i><select id="filterCategory"><option value="">All categories</option>${this.#categoryOptions(this.adminFilters.category)}</select></div>
               <div class="filter-group"><i class="fas fa-flag"></i><select id="filterStatus"><option value="">All status</option><option value="Pending">Pending</option><option value="In Progress">In Progress</option><option value="Resolved">Resolved</option></select></div>
               <div class="filter-group"><i class="fas fa-id-card"></i><input type="text" id="filterStudent" placeholder="Student ID" value="${this.adminFilters.studentId}"></div>
@@ -931,6 +931,7 @@
           const el = document.getElementById(id);
           if (el) el.addEventListener('input', update);
         });
+        document.getElementById('searchBtn')?.addEventListener('click', update);
         const prev = document.getElementById('prevPage'), next = document.getElementById('nextPage');
         if (prev) prev.addEventListener('click', ()=>{ this.page--; this.render(); });
         if (next) next.addEventListener('click', ()=>{ this.page++; this.render(); });
@@ -1022,6 +1023,12 @@
           }
         });
       }
+    }
+
+    // ---------- callServer function ----------
+    function callServer() {
+      // Placeholder for search or server call
+      alert('Bilatu button clicked! Implement search functionality here.');
     }
 
     // ---------- BOOTSTRAP ----------
